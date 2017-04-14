@@ -16,3 +16,25 @@ const monologueLines = [
   'No.',
   'I am the one who knocks!'
 ];
+
+const totalBatteries = batteryBatches.reduce(function(total, batch){
+  console.log(`${total}: ${batch}`)
+  return total + batch
+}, 0);
+
+
+const wordCountMap = monologueLines.reduce(function(map, line){
+  const wordCount = line.split(' ').length;
+
+  //map is {}
+  //keys are #of words in line
+  //if key doesn't exist we add it and set it to 0
+  if(!map[wordCount]){
+    map[wordCount] = 0;
+  }
+
+  //increment the key +1
+  map[wordCount]++;
+
+  return map;
+}, {}); //initial value is blank object = initial value for map
