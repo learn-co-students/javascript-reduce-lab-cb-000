@@ -1,0 +1,110 @@
+
+> java-script-reduce-lab@0.1.0 test /home/pensteeler-55622/code/labs/javascript-reduce-lab-cb-000
+> mocha -R mocha-multi --reporter-options nyan=-,json=.results.json
+
+ 0
+ 0
+ 0
+
+[4A[5C-
+[5C-
+[5C-
+[5C-
+[4A[6C_,------,
+[6C_|   /\_/\ 
+[6C^|__( - .-) 
+[6C  ""  "" 
+[4A 1
+ 0
+ 0
+
+[4A[5C-_
+[5C-_
+[5C-_
+[5C-_
+[4A[7C_,------,
+[7C_|  /\_/\ 
+[7C~|_( ^ .^) 
+[7C ""  "" 
+[4A 2
+ 0
+ 0
+
+[4A[5C-_-
+[5C-_-
+[5C-_-
+[5C-_-
+[4A[8C_,------,
+[8C_|   /\_/\ 
+[8C^|__( ^ .^) 
+[8C  ""  "" 
+[4A 3
+ 0
+ 0
+
+[4A[5C-_-_
+[5C-_-_
+[5C-_-_
+[5C-_-_
+[4A[9C_,------,
+[9C_|  /\_/\ 
+[9C~|_( ^ .^) 
+[9C ""  "" 
+[4A 4
+ 0
+ 0
+
+[4A[5C-_-_-
+[5C-_-_-
+[5C-_-_-
+[5C-_-_-
+[4A[10C_,------,
+[10C_|   /\_/\ 
+[10C^|__( ^ .^) 
+[10C  ""  "" 
+[4A 5
+ 0
+ 0
+
+[4A[5C-_-_-_
+[5C-_-_-_
+[5C-_-_-_
+[5C-_-_-_
+[4A[11C_,------,
+[11C_|  /\_/\ 
+[11C~|_( ^ .^) 
+[11C ""  "" 
+[4A 5
+ 1
+ 0
+
+[4A[5C-_-_-_-
+[5C-_-_-_-
+[5C-_-_-_-
+[5C-_-_-_-
+[4A[12C_,------,
+[12C_|   /\_/\ 
+[12C^|__( x .x) 
+[12C  ""  "" 
+[4A
+
+
+
+
+  5 passing (788ms)
+  1 failing
+
+  1) reducers The perfect monologue should have made the correct word count for all sentences:
+
+      Error: Expected '{"1":10,"4":null,"6":null,"7":null,"9":null,"11":null,"14":null,"15":null}' to equal '{"1":2,"4":1,"6":3,"7":2,"9":1,"11":1,"14":1,"15":3}'
+      + expected - actual
+
+      -{"1":10,"4":null,"6":null,"7":null,"9":null,"11":null,"14":null,"15":null}
+      +{"1":2,"4":1,"6":3,"7":2,"9":1,"11":1,"14":1,"15":3}
+      
+      at assert (node_modules/expect/lib/assert.js:29:9)
+      at Expectation.toEqual (node_modules/expect/lib/Expectation.js:81:30)
+      at Context.<anonymous> (test/index-test.js:27:44)
+
+
+
