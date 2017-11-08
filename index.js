@@ -16,3 +16,27 @@ const monologueLines = [
   'No.',
   'I am the one who knocks!'
 ];
+
+var totalBatteries =
+//using the .reduce() calling into the batteryBatches array
+batteryBatches.reduce(function(total, value) {
+//sum of all values
+  return total + value
+//setting starting point '0'
+}, 0)
+
+
+var wordCountMap =
+//calling monologueLines array and putting through reduce function = wordCountMap
+monologueLines.reduce(function(map, sentence) {
+//splitting all sentences in array and counting the characters to =  var wordCount
+var wordCount = sentence.split(' ').length;
+//if wordCount sentence doesnt equal 0..
+if (!map[wordCount]) {
+    map[wordCount] = 0;
+}
+//then you increase key count number every time you receive the length of sentence 
+map[wordCount]++;
+//return the total of keys
+return map;
+}, {});
