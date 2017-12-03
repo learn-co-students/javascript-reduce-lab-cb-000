@@ -17,21 +17,19 @@ const monologueLines = [
   'I am the one who knocks!'
 ];
 
-var totalBatteries = batteryBatches.reduce(function(sum, value) {
-  return sum + value;
-}, 0)
-;
-var wordCountMap = monologueLines.reduce((map, line) => {
+var totalBatteries = batteryBatches.reduce((total, num) => {
+  return total + num;
+});
 
-    var wordCount = line.split(' ').length;
+var wordCountMap = monologueLines.reduce((tally, line) => {
 
-      if (wordCount in map) {
-        map[wordCount] += 1;
-    }
+  let x = String(line.split(" ").length);
 
-      else if (!(wordCount in map)) {
-        map[wordCount] = 1;
-      }
-
-    return map;
-  }, {});
+  if (!tally[x]) {
+    tally[x] = 1;
+  }
+  else {
+    tally[x] = tally[x] + 1;
+  }
+  return tally;
+}, {});
