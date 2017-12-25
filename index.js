@@ -16,3 +16,26 @@ const monologueLines = [
   'No.',
   'I am the one who knocks!'
 ];
+
+var totalBatteries = batteryBatches.reduce((count, currentValue)=>{
+  return currentValue + count
+}, 0)
+
+var wordCountMap = monologueLines.reduce((accumulator, currentLine)=>{
+  var splitted_string = currentLine.toString().split(" ")
+
+  var countWords = splitted_string.reduce((acc, currentValue)=>{
+    return acc + 1
+  }, 0)
+
+  var key = countWords.toString()
+
+  var obj = {}
+
+  obj[key] = isNaN(accumulator[key]) ? 1 : accumulator[key] + 1
+
+  return Object.assign( accumulator, obj )
+
+}, {})
+
+// console.log(wordCountMap)
