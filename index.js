@@ -19,7 +19,8 @@ const monologueLines = [
 
 var totalBatteries = batteryBatches.reduce((total, batch) => total + batch)
 // console.log(totalBatteries); // Prints 31
-var wordCountMap = function(monologueLines) {
+
+function mapWordCount(monologueLines) {
   var map = {}
   var arrayOfLengths = monologueLines.map(line => { return line.split(' ').length });
   for (let i = 0; i < arrayOfLengths.length; i += 1) {
@@ -29,4 +30,5 @@ var wordCountMap = function(monologueLines) {
   return map;
 }
 
-console.log(wordCountMap(monologueLines)); // Prints { '1': 2, '4': 1, '6': 3, '7': 2, '9': 1, '11': 1, '14': 1, '15': 3 }
+var wordCountMap = mapWordCount(monologueLines);
+console.log(wordCountMap); // Prints { '1': 2, '4': 1, '6': 3, '7': 2, '9': 1, '11': 1, '14': 1, '15': 3 }
