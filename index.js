@@ -20,9 +20,10 @@ const monologueLines = [
 var totalBatteries = batteryBatches.reduce((total, batch) => total + batch)
 // console.log(totalBatteries); // Prints 31
 
-var wordCountMap = monologueLines.map((map, line) => {
-  console.log(line);
-  var wordCount = line.split(' ').length;
-  var key = map[wordCount];
-  typeof key === number ? key++ : key = 1;
+var wordCountMap = monologueLines.reduce((map, sentance) => {
+  var wordCount = sentance.split(' ').length;
+  if (!map[wordCount]) map[wordCount] = 0;
+  map[wordCount]++
 }, {})
+
+console.log(wordCountMap); // Prints { '1': 2, '4': 1, '6': 3, '7': 2, '9': 1, '11': 1, '14': 1, '15': 3 }
