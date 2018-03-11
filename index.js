@@ -22,8 +22,7 @@ var totalBatteries = batteryBatches.reduce((total, batch) => total + batch)
 
 var wordCountMap = monologueLines.reduce((map, sentance) => {
   var wordCount = sentance.split(' ').length;
-  if (!map[wordCount]) map[wordCount] = 0;
-  map[wordCount]++
+  map[wordCount] ? map[wordCount]++ : map[wordCount] = 1;
+  return map
 }, {})
-
-console.log(wordCountMap); // Prints { '1': 2, '4': 1, '6': 3, '7': 2, '9': 1, '11': 1, '14': 1, '15': 3 }
+//console.log(wordCountMap); // Prints { '1': 2, '4': 1, '6': 3, '7': 2, '9': 1, '11': 1, '14': 1, '15': 3 }
