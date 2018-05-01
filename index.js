@@ -1,5 +1,9 @@
 const batteryBatches = [4, 5, 3, 4, 4, 6, 5];
 
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+const totalBatteries = batteryBatches.reduce(reducer);
+
 const monologueLines = [
   'Who are you talking to right now?',
   'Who is it you think you see?',
@@ -16,3 +20,23 @@ const monologueLines = [
   'No.',
   'I am the one who knocks!'
 ];
+
+function createWordMap(wordsArray) {
+
+  // create map for word counts
+  var wordsMap = {};
+
+  wordsArray.forEach(function (key) {
+    key = key.split(' ').length;
+    if (wordsMap.hasOwnProperty(key)) {
+      wordsMap[key]++;
+    } else {
+      wordsMap[key] = 1;
+    }
+  });
+
+  return wordsMap;
+
+}
+
+const wordCountMap = createWordMap(monologueLines);
