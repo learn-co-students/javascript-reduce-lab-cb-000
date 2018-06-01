@@ -28,5 +28,5 @@ const wordCountMap = monologueLines.reduce((map, sentence)=>{
   }
   map[wordCount]++;
   return map;
-  return map;
+
 }, {});
